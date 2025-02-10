@@ -17,10 +17,10 @@ type OptionType = {
   label: string;
 };
 
-// Define the props type for GenericFormInput using a generic type
+// props type for GenericFormInput using a generic type
 interface GenericFormInputProps<T extends FieldValues> {
   placeholder: string;
-  form: UseFormReturn<T>; // Ensure strong typing for form
+  form: UseFormReturn<T>;
   label: string;
   name: Path<T>; // Use Path type for name
   type: "text" | "password" | "email" | "number" | "textarea" | "select";
@@ -29,7 +29,7 @@ interface GenericFormInputProps<T extends FieldValues> {
   options?: OptionType[];
 }
 
-// Make the component accept a generic type for form fields
+ // component accept a generic type for form fields
 const GenericFormInput = <T extends FieldValues>({
   placeholder,
   form,
