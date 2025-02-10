@@ -37,7 +37,7 @@ const Navbar = () => {
   };
 
   const handleGetStarted = ( ) =>{
-    router.push('/GetStarted')
+    router.push('/Get-Started')
   }
   return (
     <nav className="lg:bg-[#ffffffa6] md:bg-[#ffffff] sm:bg-[#ffffff] bg-[#EDF7F9]  w-[100%] fixed top-0 left-0 z-50">
