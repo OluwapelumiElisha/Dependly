@@ -22,3 +22,11 @@
     display: none;
   }
 }
+
+.hero{
+  background: url(../assets/Hero\ Section.png);
+ 
+}
+.heroGetStarted{
+  background: url(../assets/Frame\ 1000005462.png )
+}

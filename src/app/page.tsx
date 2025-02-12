@@ -1,8 +1,7 @@
 "use client";
 import { useState } from "react";
 import Navbar from "@/Components/Nav"
-import Image from "next/image";
-import AppIcon from '@/assets/App pic.png'
+import AppIcon from "@/assets/App pic.png"
 import playIcon from '@/assets/Play pic.png'
 import TabComponent from "@/Components/Tab";
 import { Button } from "@/Components/ui/button";
@@ -21,6 +20,8 @@ import BlogImage2 from '@/assets/Rectangle 110439.png'
 import BlogImage3 from '@/assets/Rectangle 110440.png'
 import footerLogo from '@/assets/_2557694377952 (3).png'
 import socialMediaLogo from '@/assets/Social icons.png'
+import Image from "next/image";
+
 // Enterprising title and subtitle 
 interface AccordionItem {
   id: number;
@@ -84,27 +85,27 @@ export default function Home() {
   // FAQS 
   const faqs: faqsTypes[] = [
     {
-      question: "Is Dependly Enterprise Efficient?",
+      question: "Is Dependly a Fintech Company?",
       answer: "With Dependly, you can streamline Contractual Agreements for Seamless Collaboration and Enhanced Transparency in Our Enterprise Solution"
     },
     {
-      question: "Is Dependly Enterprise Efficient?",
+      question: "How Do I open An Account with Dependly?",
       answer: "With Dependly, you can streamline Contractual Agreements for Seamless Collaboration and Enhanced Transparency in Our Enterprise Solution"
     },
     {
-      question: "Is Dependly Enterprise Efficient?",
+      question: "Does Dependly have Merchant Referral Program?",
       answer: "With Dependly, you can streamline Contractual Agreements for Seamless Collaboration and Enhanced Transparency in Our Enterprise Solution"
     },
     {
-      question: "Is Dependly Enterprise Efficient?",
+      question: "How Do I Contact The Customer care Centre?",
       answer: "With Dependly, you can streamline Contractual Agreements for Seamless Collaboration and Enhanced Transparency in Our Enterprise Solution"
     },
     {
-      question: "Is Dependly Enterprise Efficient?",
+      question: "How Do I complete my KYC?",
       answer: "With Dependly, you can streamline Contractual Agreements for Seamless Collaboration and Enhanced Transparency in Our Enterprise Solution"
     },
     {
-      question: "Is Dependly Enterprise Efficient?",
+      question: "How Safe Is Transfer Transfer Transactions on Dependly?",
       answer: "With Dependly, you can streamline Contractual Agreements for Seamless Collaboration and Enhanced Transparency in Our Enterprise Solution"
     }
   ];
@@ -161,7 +162,8 @@ export default function Home() {
   // Use Cases 
   return (
     <main className="bg-[#EDF7F9] w-[100%]">
-      <Navbar />
+     <div className="bg-cover bg-center hero" >
+     <Navbar />
       {/* HERO PAGE  */}
       <section className="p-4 w-[93%] m-auto lg:pt-40 md:pt-40 sm:pt-20 pt-28 lg:flex md:flex sm:block block justify-between">
         {/* Left hand Side  */}
@@ -187,6 +189,7 @@ export default function Home() {
 
 
       </section>
+     </div>
 
       {/* div carring bank logo  */}
       <div className="overflow-hidden w-full bg-white py-4 -mt-8">
@@ -406,8 +409,8 @@ export default function Home() {
               <ul className="text-[18px] font-normal text-white mt-5">
                 <li >Email: info@dependly.com</li>
                 <li className="pt-4">Phone: 08190764012</li>
-                <li className="pt-4 leading-6">Address: 12 Adegbola Aguda <br />
-                  Maiduguri City, Sokototo State 12345</li>
+                <li className="pt-4 leading-6">Contact Address: 34, Olusegun<br />
+                 Crescent Off AIT Road Lagos State.</li>
               </ul>
             </div>
             <div className="w-[60%]">
@@ -438,11 +441,15 @@ export default function Home() {
       <section className="bg-primaryColor w-[100%] font-sans lg:hidden md:hidden sm:flex">
         <div className="w-[90%] m-auto pt-14 pb-14 flex justify-center items-center">
           <div className="w-[100%]">
-            <Image
+            <div className="flex justify-center items-center">
+              <Image
               src={footerLogo}
               alt="Dependly Logo"
-              className="w-144px h-28px flex justify-center items-center"
-            /> <br />
+              className="w-144px h-28px"
+            /> 
+            </div>
+            
+            <br />
 
             <div className="text-white text-[18px] ">
               <ul className="text-center font-normal text-[14px]">
@@ -456,9 +463,11 @@ export default function Home() {
             <ul className="text-[14px] font-normal text-white mt-10 text-center">
                 <li >Email: info@dependly.com</li>
                 <li className="pt-4">Phone: 08190764012</li>
-                <li className="pt-4 leading-6">Address: 12 Adegbola Aguda <br />
-                  Maiduguri City, Sokototo State 12345</li>
+                <li className="pt-4 leading-6">Contact Address: 34, Olusegun<br />
+                 Crescent Off AIT Road Lagos State</li>
               </ul>
+
+               
 
               <div className="w-[70%] mt-9 m-auto">
               {/* <div className="w-[100%] flex p-4 justify-between bg-white rounded-lg"> */}
@@ -468,7 +477,7 @@ export default function Home() {
                   onChange={(e) => setEmail(e.target.value)}
                   required
                   className="w-[100%] p-4 rounded-md  focus:outline-0 border border-primaryColor text-primaryColor placeholder:text-[18px] placeholder:font-normal placeholder:text-primaryColor pl-2" placeholder="Email" /> <br /> <br />
-                <Button type="submit" className="bg-primaryColor w-full text-white text-[20px] font-normal px-8 md:px-4 lg:px-8 py-6 sm:text-[14px] rounded-md hover:bg-[#0148AB] font-sans">Subscribe to Newsletter</Button>
+                <Button type="submit" className="bg-primaryColor w-full text-white text-[18px] font-normal px-8 md:px-4 lg:px-8 py-6 sm:text-[14px] rounded-md hover:bg-[#0148AB] font-sans">Subscribe to Newsletter</Button>
 
               </form>
               <div className="flex justify-center items-center">
