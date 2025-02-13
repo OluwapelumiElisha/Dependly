@@ -3,7 +3,8 @@ import { useState } from "react";
 import Image from "next/image";
 import BurgerMenuIcon from "@/assets/Burger menu icon.png";
 import closeMenuIcon from "@/assets/Vector.png";
-import Logo from "../../public/images/Dependly FLW 2.png";
+// import Logo from "../../public/images/Dependly.png";
+import Logo from '@/images/Dependly.png'
 import { Button } from "./ui/button";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
