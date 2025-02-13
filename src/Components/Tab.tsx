@@ -74,7 +74,7 @@ export default function TabComponent() {
       {/* Header Text */}
       
       {/* Image for Each Tab */}
-      <div className="mt-6  w-[85%] bg-[#0091A636] flex justify-center items-center rounded-t-xl" >
+      <div className="mt-6  w-[100%] lg:w-[85%] md:w-[85%] sm:w-[100%] bg-[#0091A636] flex justify-center items-center rounded-t-xl" >
         <Image src={tabContent[activeTab].imageSrc} alt={activeTab} width={423} height={500} className="mt-3"/>
       </div>
       {/* Image for Each Tab */}
