@@ -162,34 +162,34 @@ export default function Home() {
   // Use Cases 
   return (
     <main className="bg-[#EDF7F9] w-[100%]">
-     <div className="bg-cover bg-center hero" >
-     <Navbar />
-      {/* HERO PAGE  */}
-      <section className="p-4 w-[93%] m-auto lg:pt-40 md:pt-40 sm:pt-20 pt-28 lg:flex md:flex sm:block block justify-between">
-        {/* Left hand Side  */}
-        <div className="font-sans lg:w-[40%] md:w-[40%] sm:w-[90%] w-[100%]">
-          <h1 className="font-bold lg:text-[40px] md:text-[25px] sm:text-[25px] text-[20px] bg-gradient-to-r from-[#002F72] to-[#2A66B9D9] bg-clip-text text-transparent">Transfer, Embed Contract, <br /> and Escrow </h1> <br />
-          <p className="font-normal text-primaryColor text-[16px] lg:text-[24px] md:text-[20px] sm:text-[20px]">Our Cutting-Edge, Secure Solutions Not Only <span className="font-semibold text-[#001839]">Safeguard Your Financial Moves</span>  But Also Craft Delightful Experiences, Building Unshakeable Trust With Every Interaction.</p>
-          <div className="hidden mt-5 lg:flex md:flex sm:hidden space-x-2">
-            <Image src={AppIcon} alt="AppIcon" />
-            <Image src={playIcon} alt="AppIcon" />
-          </div>
+      <div className="bg-cover bg-center hero" >
+        <Navbar />
+        {/* HERO PAGE  */}
+        <section className="p-4 w-[93%] m-auto lg:pt-40 md:pt-40 sm:pt-20 pt-28 lg:flex md:flex sm:block block justify-between">
           {/* Left hand Side  */}
-          {/* Right hand side  */}
-        </div>
-        <div className="lg:hidden md:hidden sm:block block">
-          <Button className="bg-[#0148AB] text-white px-4 py-2 rounded-lg hover:bg-[#0148AB] mt-5 font-sans">Start Using Dependly</Button>
+          <div className="font-sans lg:w-[40%] md:w-[40%] sm:w-[90%] w-[100%]">
+            <h1 className="font-bold lg:text-[40px] md:text-[25px] sm:text-[25px] text-[20px] bg-gradient-to-r from-[#002F72] to-[#2A66B9D9] bg-clip-text text-transparent">Transfer, Embed Contract, <br /> and Escrow </h1> <br />
+            <p className="font-normal text-primaryColor text-[16px] lg:text-[24px] md:text-[20px] sm:text-[20px]">Our Cutting-Edge, Secure Solutions Not Only <span className="font-semibold text-[#001839]">Safeguard Your Financial Moves</span>  But Also Craft Delightful Experiences, Building Unshakeable Trust With Every Interaction.</p>
+            <div className="hidden mt-5 lg:flex md:flex sm:hidden space-x-2 ">
+              <Image src={AppIcon} alt="AppIcon" className="w-auto h-auto" />
+              <Image src={playIcon} alt="AppIcon" />
+            </div>
+            {/* Left hand Side  */}
+            {/* Right hand side  */}
+          </div>
+          <div className="lg:hidden md:hidden sm:block block">
+            <Button className="bg-[#0148AB] text-white px-4 py-2 rounded-lg hover:bg-[#0148AB] mt-5 font-sans">Start Using Dependly</Button>
 
-        </div>
-        {/* The Tab Component  */}
-        <div className=" lg:w-[50%] md:w-[50%] sm:w-[90%] w-[100%]  lg:-mt-6 md:-mt-6 sm:mt-13 mt-12">
-          <TabComponent />
-        </div>
-        {/* The Tab Component  */}
+          </div>
+          {/* The Tab Component  */}
+          <div className=" lg:w-[50%] md:w-[50%] sm:w-[90%] w-[100%]  lg:-mt-6 md:-mt-6 sm:mt-13 mt-12">
+            <TabComponent />
+          </div>
+          {/* The Tab Component  */}
 
 
-      </section>
-     </div>
+        </section>
+      </div>
 
       {/* div carring bank logo  */}
       <div className="overflow-hidden w-full bg-white py-4 -mt-8">
@@ -211,7 +211,7 @@ export default function Home() {
       {/* div carring bank logo  */}
       {/* Section How Dependly Works  */}
       <section id="enterprise-heading" className="w-[90%] m-auto p-4 font-sans mt-10">
-        <h1  className="lg:text-[32px] md:text-[29px] sm:text-[18px] text-[16px]  font-bold text-primaryColor">How Dependly Works</h1>
+        <h1 className="lg:text-[32px] md:text-[29px] sm:text-[18px] text-[16px]  font-bold text-primaryColor">How Dependly Works</h1>
         <div className="lg:flex md:flex sm:block blockmt-10 lg:space-x-4 md:space-x-4 sm:space-x-2 space-x-1 ">
           <div className="lg:w-[58%] md:w-[58%] sm:w-[90%] w-[100%]  overflow-hidden py-4 relative">
             <ImageRow />
@@ -274,28 +274,30 @@ export default function Home() {
       <section className="w-[100%] bg-white font-sans">
         <div className="w-[90%] m-auto  bg-white p-4 pt-14 pb-12">
           <h1 className="lg:text-[32px]  mb-5 md:text-[25px] sm:text-[18px] text-[16px] font-bold text-primaryColor">Use Cases</h1>
-          <div className="max-w-7xl mx-auto overflow-x-auto">
-        <div className="flex space-x-6 min-w-max md:min-w-full mt-6 font-sans">
-          {/* Use Case Items */}
-          {useCases.map((useCase: UseCase, index: number) => (
-          <div
-          key={index}
-          className="relative w-64 md:w-80 p-4 bg-white border-3-[4px] border-transparent"
-        >
-          <div className="absolute top-0 left-0 h-full w-[6px] bg-gradient-to-b from-[#001839]  via-[#0e3fc6b5] to-[#0E3EC6]"></div>
-        
-          {/* Content */}
-          <h3 className="font-bold lg:text-[20px] text-[#001839] mb-5 md:text-[25px] sm:text-[12px] text-[12px]">
-            {useCase.title}
-          </h3>
-          <p className="lg:text-[19px] text-[#001839] mb-5 md:text-[25px] sm:text-[10px] text-[10px] font-normal">
-            {useCase.description}
-          </p>
-        </div>
-        
-          ))}
-        </div>
-        </div>
+            {/* Maquree on mobile device update  */}
+          <div className="max-w-7xl mx-auto overflow-x-hidden">
+            <div
+              className="flex space-x-6 min-w-max md:min-w-full mt-6 font-sans sm:animate-marquee animate-marquee md:animate-none"
+            >
+              {useCases.map((useCase: UseCase, index: number) => (
+                <div
+                  key={index}
+                  className="relative w-64 md:w-80 p-3 bg-white border-[4px] border-transparent"
+                >
+                  <div className="absolute top-0 left-0 h-full w-[6px] bg-gradient-to-b from-[#001839] via-[#0e3fc6b5] to-[#0E3EC6]"></div>
+
+                  {/* Content */}
+                  <h3 className="font-bold lg:text-[20px] text-[#001839] mb-5 md:text-[25px] sm:text-[12px] text-[12px]">
+                    {useCase.title}
+                  </h3>
+                  <p className="lg:text-[19px] text-[#001839] mb-5 md:text-[25px] sm:text-[10px] text-[10px] font-normal">
+                    {useCase.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+
         </div>
       </section>
       {/* Div Use Cases  */}
@@ -334,7 +336,7 @@ export default function Home() {
       </section>
       {/* Div Blogs  */}
       {/* SECTION FAQ  */}
-      <section className="w-[100%] bg-white font-sans "  id="faqs">
+      <section className="w-[100%] bg-white font-sans " id="faqs">
         <div className="w-[90%] m-auto pt-12 pb-16">
           <h1 className="text-[32px] font-bold text-primaryColor">FAQs</h1>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
@@ -410,7 +412,7 @@ export default function Home() {
                 <li >Email: info@dependly.com</li>
                 <li className="pt-4">Phone: 08190764012</li>
                 <li className="pt-4 leading-6">Contact Address: 34, Olusegun<br />
-                 Crescent Off AIT Road Lagos State.</li>
+                  Crescent Off AIT Road Lagos State.</li>
               </ul>
             </div>
             <div className="w-[60%]">
@@ -429,8 +431,8 @@ export default function Home() {
           </div>
           <div className="w-full mt-10 h-[1px] bg-white"></div>
           <div className="flex gap-10 mt-12 text-[18px]">
-          <p className=" text-white">© 2024 Dependly. All Rights Reserved.</p>
-          <p className=" text-white font-normal" >Privacy Policy</p>
+            <p className=" text-white">© 2024 Dependly. All Rights Reserved.</p>
+            <p className=" text-white font-normal" >Privacy Policy</p>
           </div>
         </div>
 
@@ -443,12 +445,12 @@ export default function Home() {
           <div className="w-[100%]">
             <div className="flex justify-center items-center">
               <Image
-              src={footerLogo}
-              alt="Dependly Logo"
-              className="w-144px h-28px"
-            /> 
+                src={footerLogo}
+                alt="Dependly Logo"
+                className="w-144px h-28px"
+              />
             </div>
-            
+
             <br />
 
             <div className="text-white text-[18px] ">
@@ -457,19 +459,19 @@ export default function Home() {
                 <li className="hover:text-[#2d2d2d] cursor-pointer pt-4">Blog</li>
                 <li className="hover:text-[#2d2d2d] cursor-pointer pt-4">FAQs</li>
                 <li className="hover:text-[#2d2d2d] cursor-pointer pt-4">Contact</li>
-            <Button className="bg-white text-[#2D2D2D] text-[15px] rounded-lg font-normal mt-5">Contact Us:</Button>
+                <Button className="bg-white text-[#2D2D2D] text-[15px] rounded-lg font-normal mt-5">Contact Us:</Button>
               </ul>
             </div>
             <ul className="text-[14px] font-normal text-white mt-10 text-center">
-                <li >Email: info@dependly.com</li>
-                <li className="pt-4">Phone: 08190764012</li>
-                <li className="pt-4 leading-6">Contact Address: 34, Olusegun<br />
-                 Crescent Off AIT Road Lagos State</li>
-              </ul>
+              <li >Email: info@dependly.com</li>
+              <li className="pt-4">Phone: 08190764012</li>
+              <li className="pt-4 leading-6">Contact Address: 34, Olusegun<br />
+                Crescent Off AIT Road Lagos State</li>
+            </ul>
 
-               
 
-              <div className="w-[70%] mt-9 m-auto">
+
+            <div className="w-[70%] mt-9 m-auto">
               {/* <div className="w-[100%] flex p-4 justify-between bg-white rounded-lg"> */}
               <form onSubmit={handleSubscribe} className="w-[100%] p-4 bg-white rounded-md">
                 <input type="email"
@@ -482,21 +484,21 @@ export default function Home() {
               </form>
               <div className="flex justify-center items-center">
                 <Image
-              src={socialMediaLogo}
-              alt="Dependly Logo"
-              className="w-30px h-30px mt-16 "
-            />
+                  src={socialMediaLogo}
+                  alt="Dependly Logo"
+                  className="w-30px h-30px mt-16 "
+                />
               </div>
               <div className="flex justify-center items-center">
                 <div>
                   <div className="w-full mt-10 h-[1px] bg-white"></div>
-              <p className="mt-8 text-white">© 2024 Dependly. All Rights Reserved.</p>
-              <p className="text-[18px] text-white mt-8 text-center font-normal" >Privacy Policy</p>
+                  <p className="mt-8 text-white">© 2024 Dependly. All Rights Reserved.</p>
+                  <p className="text-[18px] text-white mt-8 text-center font-normal" >Privacy Policy</p>
                 </div>
-              
+
               </div>
-              
-              
+
+
               {/* </div> */}
             </div>
           </div>

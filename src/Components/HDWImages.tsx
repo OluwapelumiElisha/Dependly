@@ -53,7 +53,7 @@ export default function ImageRow() {
     style={{ transform: `translateX(-${scrollIndex * 100}%)` }} 
   >
     {images.concat(images).map((src, index) => (
-      <div key={index} className="w-full shrink-0">
+      <div key={index} className="w-full shrink-0 ">
         <Image
           src={src}
           alt={`Image ${index + 1}`}
@@ -61,6 +61,7 @@ export default function ImageRow() {
           width={500}
           height={50}
           className="object-cover w-full h-full"
+          
         />
       </div>
     ))}
