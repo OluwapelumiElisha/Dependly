@@ -44,7 +44,7 @@ const Navbar = () => {
       <div className="w-[90%] m-auto  p-4 flex justify-between  items-center">
         {/* Logo */}
         <Link href={"/"}>
-          <Image
+          <img
             src={Logo}
             alt="Dependly Logo"
             className="lg:w-[180px] lg:h-[54px] md:w-[180px] md:h-[54px] sm:w-[180px] sm:h-[54px] w-[124px] h-[38px]"
