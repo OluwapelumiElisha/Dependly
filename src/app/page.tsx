@@ -184,14 +184,14 @@ export default function Home() {
       <div className="bg-cover bg-center hero" >
         <Navbar />
         {/* HERO PAGE  */}
-        <section className="p-4 w-[93%] m-auto lg:pt-40 md:pt-40 sm:pt-20 pt-28 lg:flex md:flex sm:block block justify-between">
+        <section className="p-4 w-[93%] m-auto lg:pt-40 md:pt-40 sm:pt-28 pt-28 lg:flex md:flex sm:block block justify-between">
           {/* Left hand Side  */}
           <div className="relative  h-auto lg:w-[60%] md:w-[60%] sm:w-[90%] w-[100%]">
             <AnimatePresence mode="wait">
               {showFirst ? (
                 <motion.div
                   key="first"
-                  className="font-sans "
+                  className="font-sans lg:w-[90%] md:w-[90%] sm:w-[90%] w-[100%]"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
@@ -216,7 +216,7 @@ export default function Home() {
               ):(
                 <motion.div
                   key="second"
-                  className="font-sans "
+                  className="font-sans lg:w-[90%] md:w-[90%] sm:w-[90%] w-[100%]"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
