@@ -7,6 +7,7 @@ import Logo from "../assets/Dependly FLW 2.png";
 import { Button } from "./ui/button";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { images } from "../../data/images";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -45,7 +46,7 @@ const Navbar = () => {
         {/* Logo */}
         <Link href={"/"}>
           <Image
-            src={Logo}
+            src={images.Logo}
             alt="Dependly Logo"
             className="lg:w-[180px] lg:h-[54px] md:w-[180px] md:h-[54px] sm:w-[180px] sm:h-[54px] w-[124px] h-[38px]"
             width={100}
