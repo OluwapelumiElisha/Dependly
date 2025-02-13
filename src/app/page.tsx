@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Navbar from "@/Components/Nav"
 import AppIcon from "@/assets/App pic.png"
 import playIcon from '@/assets/Play pic.png'
@@ -21,6 +21,9 @@ import BlogImage3 from '@/assets/Rectangle 110440.png'
 import footerLogo from '@/assets/_2557694377952 (3).png'
 import socialMediaLogo from '@/assets/Social icons.png'
 import Image from "next/image";
+import { motion, AnimatePresence } from "framer-motion";
+
+
 
 // Enterprising title and subtitle 
 interface AccordionItem {
@@ -70,6 +73,17 @@ const blogData = [
 ];
 // Blog
 export default function Home() {
+
+  // framer hero for the hero section 
+  const [showFirst, setShowFirst] = useState(true);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setShowFirst((prev) => !prev);
+    }, 4000); // Switch every 4 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+  // framer hero for the hero section 
 
   const toggleAccordion = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -167,19 +181,57 @@ export default function Home() {
         {/* HERO PAGE  */}
         <section className="p-4 w-[93%] m-auto lg:pt-40 md:pt-40 sm:pt-20 pt-28 lg:flex md:flex sm:block block justify-between">
           {/* Left hand Side  */}
-          <div className="font-sans lg:w-[40%] md:w-[40%] sm:w-[90%] w-[100%]">
-            <h1 className="font-bold lg:text-[40px] md:text-[25px] sm:text-[25px] text-[20px] bg-gradient-to-r from-[#002F72] to-[#2A66B9D9] bg-clip-text text-transparent">Transfer, Embed Contract, <br /> and Escrow </h1> <br />
-            <p className="font-normal text-primaryColor text-[16px] lg:text-[24px] md:text-[20px] sm:text-[20px]">Our Cutting-Edge, Secure Solutions Not Only <span className="font-semibold text-[#001839]">Safeguard Your Financial Moves</span>  But Also Craft Delightful Experiences, Building Unshakeable Trust With Every Interaction.</p>
-            <div className="hidden mt-5 lg:flex md:flex sm:hidden space-x-2 ">
-              <Image src={AppIcon} alt="AppIcon" className="w-auto h-auto" />
+          <div className="relative  h-auto lg:w-[60%] md:w-[60%] sm:w-[90%] w-[100%]">
+            <AnimatePresence mode="wait">
+              {showFirst ? (
+                <motion.div
+                  key="first"
+                  className="font-sans "
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 1 }}
+                >
+                  <h1 className="font-bold lg:text-[40px] md:text-[25px] sm:text-[25px] text-[20px] bg-gradient-to-r from-[#002F72] to-[#2A66B9D9] bg-clip-text text-transparent">
+                    Transfer, Embed Contract, <br /> and Escrow
+                  </h1> <br />
+                  <p className="font-normal text-primaryColor text-[16px] lg:text-[24px] md:text-[20px] sm:text-[20px]">Our Cutting-Edge, Secure Solutions Not Only <span className="font-semibold text-[#001839]">Safeguard Your Financial Moves</span>  But Also Craft Delightful Experiences, Building Unshakeable Trust With Every Interaction.</p>
+
+                  
+                  <div className="hidden mt-5 lg:flex md:flex sm:hidden space-x-2 ">
+              <Image src={AppIcon} alt="AppIcon"  />
               <Image src={playIcon} alt="AppIcon" />
             </div>
-            {/* Left hand Side  */}
-            {/* Right hand side  */}
-          </div>
-          <div className="lg:hidden md:hidden sm:block block">
+            
+            <div className="lg:hidden md:hidden sm:block block">
             <Button className="bg-[#0148AB] text-white px-4 py-2 rounded-lg hover:bg-[#0148AB] mt-5 font-sans">Start Using Dependly</Button>
+          </div>
+          
+                </motion.div>
+              ) : (
+                <motion.div
+                  key="second"
+                  className="font-sans "
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 1 }}
+                >
+                  <h1 className="font-bold lg:text-[40px] md:text-[25px] sm:text-[25px] text-[20px] bg-gradient-to-r from-[#002F72] to-[#2A66B9D9] bg-clip-text text-transparent">Cross-Border Transactions, Currency Swap,
+                    <br /> Escrow—Reimagined </h1> <br />
 
+                  <p className="font-normal text-primaryColor text-[16px] lg:text-[24px] md:text-[20px] sm:text-[20px]">Seamless, secure, and efficient, your <span className="font-semibold text-[#001839]">global transactions with embeded contracts</span>  gives precision and trust. Whether you're handling a cross-border payment, executing a currency swap, or leveraging escrow protection, we ensure your funds move effortlessly while mitigating risks.</p>
+                  <div className="hidden mt-5 lg:flex md:flex sm:hidden space-x-2 ">
+              <Image src={AppIcon} alt="AppIcon"  />
+              <Image src={playIcon} alt="AppIcon" />
+            </div>
+            
+            <div className="lg:hidden md:hidden sm:block block">
+            <Button className="bg-[#0148AB] text-white px-4 py-2 rounded-lg hover:bg-[#0148AB] mt-5 font-sans">Start Using Dependly</Button>
+          </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
           {/* The Tab Component  */}
           <div className=" lg:w-[50%] md:w-[50%] sm:w-[90%] w-[100%]  lg:-mt-6 md:-mt-6 sm:mt-13 mt-12">
@@ -274,7 +326,7 @@ export default function Home() {
       <section className="w-[100%] bg-white font-sans">
         <div className="w-[90%] m-auto  bg-white p-4 pt-14 pb-12">
           <h1 className="lg:text-[32px]  mb-5 md:text-[25px] sm:text-[18px] text-[16px] font-bold text-primaryColor">Use Cases</h1>
-            {/* Maquree on mobile device update  */}
+          {/* Maquree on mobile device update  */}
           <div className="max-w-7xl mx-auto overflow-x-hidden">
             <div
               className="flex space-x-6 min-w-max md:min-w-full mt-6 font-sans sm:animate-marquee animate-marquee md:animate-none"
@@ -507,11 +559,8 @@ export default function Home() {
         </div>
       </section>
       {/* Mobile View  */}
-
-
-
     </main>
-    // </div>
+
 
 
   );
