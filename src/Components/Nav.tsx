@@ -3,7 +3,7 @@ import { useState } from "react";
 import Image from "next/image";
 import BurgerMenuIcon from "@/assets/Burger menu icon.png";
 import closeMenuIcon from "@/assets/Vector.png";
-// import Logo from "../assets/Dependly FLW 2.png";
+import Logo from "../../public/images/Dependly FLW 2.png";
 import { Button } from "./ui/button";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -46,7 +46,7 @@ const Navbar = () => {
         {/* Logo */}
         <Link href={"/"}>
           <Image
-            src={images.Logo}
+            src={Logo}
             alt="Dependly Logo"
             className="lg:w-[180px] lg:h-[54px] md:w-[180px] md:h-[54px] sm:w-[180px] sm:h-[54px] w-[124px] h-[38px]"
             width={100}
