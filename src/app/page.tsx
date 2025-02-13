@@ -22,6 +22,7 @@ import footerLogo from '@/assets/_2557694377952 (3).png'
 import socialMediaLogo from '@/assets/Social icons.png'
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+import { useRouter } from "next/navigation";
 
 
 
@@ -73,7 +74,11 @@ const blogData = [
 ];
 // Blog
 export default function Home() {
-
+  const router = useRouter()
+  
+  const handleGetStarted = ( ) =>{
+    router.push('/Get-Started')
+  }
   // framer hero for the hero section 
   const [showFirst, setShowFirst] = useState(true);
   useEffect(() => {
@@ -204,11 +209,11 @@ export default function Home() {
             </div>
             
             <div className="lg:hidden md:hidden sm:block block">
-            <Button className="bg-[#0148AB] text-white px-4 py-2 rounded-lg hover:bg-[#0148AB] mt-5 font-sans">Start Using Dependly</Button>
+            <Button onClick={handleGetStarted} className="bg-[#0148AB] text-white px-4 py-2 rounded-lg hover:bg-[#0148AB] mt-5 font-sans">Start Using Dependly</Button>
           </div>
           
                 </motion.div>
-              ) : (
+              ):(
                 <motion.div
                   key="second"
                   className="font-sans "
@@ -220,14 +225,14 @@ export default function Home() {
                   <h1 className="font-bold lg:text-[40px] md:text-[25px] sm:text-[25px] text-[20px] bg-gradient-to-r from-[#002F72] to-[#2A66B9D9] bg-clip-text text-transparent">Cross-Border Transactions, Currency Swap,
                     <br /> Escrow—Reimagined </h1> <br />
 
-                  <p className="font-normal text-primaryColor text-[16px] lg:text-[24px] md:text-[20px] sm:text-[20px]">Seamless, secure, and efficient, your <span className="font-semibold text-[#001839]">global transactions with embeded contracts</span>  gives precision and trust. Whether you're handling a cross-border payment, executing a currency swap, or leveraging escrow protection, we ensure your funds move effortlessly while mitigating risks.</p>
+                  <p className="font-normal text-primaryColor text-[16px] lg:text-[24px] md:text-[20px] sm:text-[20px]">Seamless, secure, and efficient, your <span className="font-semibold text-[#001839]">global transactions with embeded contracts</span>  gives precision and trust. Whether you&apos;re handling a cross-border payment, executing a currency swap, or leveraging escrow protection, we ensure your funds move effortlessly while mitigating risks.</p>
                   <div className="hidden mt-5 lg:flex md:flex sm:hidden space-x-2 ">
               <Image src={AppIcon} alt="AppIcon"  />
               <Image src={playIcon} alt="AppIcon" />
             </div>
             
             <div className="lg:hidden md:hidden sm:block block">
-            <Button className="bg-[#0148AB] text-white px-4 py-2 rounded-lg hover:bg-[#0148AB] mt-5 font-sans">Start Using Dependly</Button>
+            <Button onClick={handleGetStarted} className="bg-[#0148AB] text-white px-4 py-2 rounded-lg hover:bg-[#0148AB] mt-5 font-sans">Start Using Dependly</Button>
           </div>
                 </motion.div>
               )}
