@@ -1,8 +1,6 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
-import BurgerMenuIcon from "@/assets/Burger menu icon.png";
-import closeMenuIcon from "@/assets/Vector.png";
 import { Button } from "./ui/button";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -47,8 +45,8 @@ const Navbar = () => {
             src='/images/Dependly.png'
             alt="Dependly Logo"
             className="lg:w-[180px] lg:h-[54px] md:w-[180px] md:h-[54px] sm:w-[180px] sm:h-[54px] w-[124px] h-[38px]"
-            width={100}
-            height={100}
+            width={180}
+            height={54}
           />
         </Link>
         <a></a>
@@ -87,15 +85,19 @@ const Navbar = () => {
         >
           {isOpen ? (
             <Image
-              src={closeMenuIcon}
+              src="/images/Vector.png"
               className="w-[24px] h-[24px]"
               alt="Burger-menu-icon"
+              width={24}
+              height={24}
             />
           ) : (
             <Image
-              src={BurgerMenuIcon}
+              src="/images/Burger-menu-icon.png"
               className="w-[24px] h-[16px]"
               alt="Burger-menu-icon"
+              width={24}
+              height={16}
             />
           )}
         </button>

@@ -1,25 +1,9 @@
 "use client";
 import { useState, useEffect } from "react";
 import Navbar from "@/Components/Nav"
-import AppIcon from "@/assets/App pic.png"
-import playIcon from '@/assets/Play pic.png'
 import TabComponent from "@/Components/Tab";
 import { Button } from "@/Components/ui/button";
-import flutterWaveIcon from '@/assets/image 451.png'
-import awsIcon from '@/assets/image 452.png'
-import gbtIcon from "@/assets/image 454.png"
-import wemaIcon from '@/assets/Group.png'
-import payStackIcon from '@/assets/_2960056556176 (1).png'
-import NibIcon from '@/assets/image 453.png'
 import ImageRow from "@/Components/HDWImages";
-import AccordPlusIcon from '@/assets/Plus icon (1).png'
-import AccordSubIcon from '@/assets/Plus icon.png'
-import communityImage from '@/assets/Illustration.png'
-import BlogImage1 from '@/assets/Rectangle 110438.png'
-import BlogImage2 from '@/assets/Rectangle 110439.png'
-import BlogImage3 from '@/assets/Rectangle 110440.png'
-import footerLogo from '@/assets/_2557694377952 (3).png'
-import socialMediaLogo from '@/assets/Social icons.png'
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { useRouter } from "next/navigation";
@@ -57,17 +41,17 @@ const accordionData: AccordionItem[] = [
 // Blog
 const blogData = [
   {
-    image: BlogImage1,
+    image: "/images/Rectangle-110438.png",
     title: "Navigating the Gig Economy",
     description: "Dive into how Dependly revolutionizes the gig economy, providing freelancers with secure payment processing, contract management, and seamless transactions. Learn how Dependly empowers freelancers to thrive in today's dynamic work landscape."
   },
   {
-    image: BlogImage2,
+    image: "/images/Rectangle-110439.png",
     title: "Contract Management 101: Simplifying Business Agreements with Dependly",
     description: "Uncover the importance of effective contract management for businesses and how Dependly simplifies the process."
   },
   {
-    image: BlogImage3,
+    image: "/images/Rectangle-110440.png",
     title: "Enhancing Online Merchant Transactions",
     description: "Dive into how Dependly revolutionizes the gig economy, providing freelancers with secure payment processing, contract management, and seamless transactions."
   }
@@ -75,8 +59,8 @@ const blogData = [
 // Blog
 export default function Home() {
   const router = useRouter()
-  
-  const handleGetStarted = ( ) =>{
+
+  const handleGetStarted = () => {
     router.push('/Get-Started')
   }
   // framer hero for the hero section 
@@ -94,12 +78,12 @@ export default function Home() {
     setOpenIndex(openIndex === index ? null : index);
   };
   const bankLogos = [
-    { src: flutterWaveIcon, alt: "Flutterwave", lgW: 125.98, lgH: 30, mdW: 125.98, mdH: 30, smW: 125.98, smH: 30, w: 900.02, h: 210.44 },
-    { src: payStackIcon, alt: "Paystack", lgW: 168.37, lgH: 30, mdW: 168.37, mdH: 30, smW: 168.37, smH: 30, w: 93.68, h: 16.69 },
-    { src: awsIcon, alt: "AWS", lgW: 50.11, lgH: 30, mdW: 50.11, mdH: 30, smW: 50.11, smH: 30, w: 35.81, h: 21.44 },
-    { src: gbtIcon, alt: "GBT", lgW: 30, lgH: 30, mdW: 30, mdH: 30, smW: 30, smH: 30, w: 21.44, h: 21.44 },
-    { src: wemaIcon, alt: "WBank", lgW: 53.54, lgH: 30, mdW: 53.54, mdH: 30, smW: 53.54, smH: 30, w: 38.26, h: 21.44 },
-    { src: NibIcon, alt: "Nibss", lgW: 94.62, lgH: 30, mdW: 94.62, mdH: 30, smW: 94.62, smH: 30, w: 67.6, h: 21.44 },
+    { src: "/images/image-451.png", alt: "Flutterwave", lgW: 125.98, lgH: 30, mdW: 125.98, mdH: 30, smW: 125.98, smH: 30, w: 900.02, h: 210.44 },
+    { src: "/images/_2960056556176-(1).png", alt: "Paystack", lgW: 168.37, lgH: 30, mdW: 168.37, mdH: 30, smW: 168.37, smH: 30, w: 93.68, h: 16.69 },
+    { src: "/images/image-452.png", alt: "AWS", lgW: 50.11, lgH: 30, mdW: 50.11, mdH: 30, smW: 50.11, smH: 30, w: 35.81, h: 21.44 },
+    { src: "/images/image-454.png", alt: "GBT", lgW: 30, lgH: 30, mdW: 30, mdH: 30, smW: 30, smH: 30, w: 21.44, h: 21.44 },
+    { src: "/images/Group.png", alt: "WBank", lgW: 53.54, lgH: 30, mdW: 53.54, mdH: 30, smW: 53.54, smH: 30, w: 38.26, h: 21.44 },
+    { src: "/images/image-453.png", alt: "Nibss", lgW: 94.62, lgH: 30, mdW: 94.62, mdH: 30, smW: 94.62, smH: 30, w: 67.6, h: 21.44 },
   ]
   // FAQS 
   const faqs: faqsTypes[] = [
@@ -202,18 +186,18 @@ export default function Home() {
                   </h1> <br />
                   <p className="font-normal text-primaryColor text-[16px] lg:text-[24px] md:text-[20px] sm:text-[20px]">Our Cutting-Edge, Secure Solutions Not Only <span className="font-semibold text-[#001839]">Safeguard Your Financial Moves</span>  But Also Craft Delightful Experiences, Building Unshakeable Trust With Every Interaction.</p>
 
-                  
+
                   <div className="hidden mt-5 lg:flex md:flex sm:hidden space-x-2 ">
-              <Image src={AppIcon} alt="AppIcon"  />
-              <Image src={playIcon} alt="AppIcon" />
-            </div>
-            
-            <div className="lg:hidden md:hidden sm:block block">
-            <Button onClick={handleGetStarted} className="bg-[#0148AB] text-white px-4 py-2 rounded-lg hover:bg-[#0148AB] mt-5 font-sans">Start Using Dependly</Button>
-          </div>
-          
+                  <Image src="/images/App-pic.png" alt="AppIcon" width={163.03} height={60} />
+                  <Image src="/images/Play-pic.png" alt="AppIcon" width={163.03} height={60} />
+                  </div>
+
+                  <div className="lg:hidden md:hidden sm:block block">
+                    <Button onClick={handleGetStarted} className="bg-[#0148AB] text-white px-4 py-2 rounded-lg hover:bg-[#0148AB] mt-5 font-sans">Start Using Dependly</Button>
+                  </div>
+
                 </motion.div>
-              ):(
+              ) : (
                 <motion.div
                   key="second"
                   className="font-sans lg:w-[90%] md:w-[90%] sm:w-[90%] w-[100%]"
@@ -227,13 +211,13 @@ export default function Home() {
 
                   <p className="font-normal text-primaryColor text-[16px] lg:text-[24px] md:text-[20px] sm:text-[20px]">Seamless, secure, and efficient, your <span className="font-semibold text-[#001839]">global transactions with embeded contracts</span>  gives precision and trust. Whether you&apos;re handling a cross-border payment, executing a currency swap, or leveraging escrow protection, we ensure your funds move effortlessly while mitigating risks.</p>
                   <div className="hidden mt-5 lg:flex md:flex sm:hidden space-x-2 ">
-              <Image src={AppIcon} alt="AppIcon"  />
-              <Image src={playIcon} alt="AppIcon" />
-            </div>
-            
-            <div className="lg:hidden md:hidden sm:block block">
-            <Button onClick={handleGetStarted} className="bg-[#0148AB] text-white px-4 py-2 rounded-lg hover:bg-[#0148AB] mt-5 font-sans">Start Using Dependly</Button>
-          </div>
+                    <Image src="/images/App-pic.png" alt="AppIcon" width={163.03} height={60} />
+                    <Image src="/images/Play-pic.png" alt="AppIcon" width={163.03} height={60} />
+                  </div>
+
+                  <div className="lg:hidden md:hidden sm:block block">
+                    <Button onClick={handleGetStarted} className="bg-[#0148AB] text-white px-4 py-2 rounded-lg hover:bg-[#0148AB] mt-5 font-sans">Start Using Dependly</Button>
+                  </div>
                 </motion.div>
               )}
             </AnimatePresence>
@@ -307,9 +291,9 @@ export default function Home() {
                   </span>
 
                   {openIndex === index ? (
-                    <Image src={AccordSubIcon} alt="subIcon" className="w-6 h-6" />
+                    <Image src="/images/Plus-icon-(1).png" alt="subIcon" className="w-6 h-6" width={100} height={100} />
                   ) : (
-                    <Image src={AccordPlusIcon} alt="PlusIcon" className="w-6 h-6" />
+                    <Image src="/images/Plus-icon.png" alt="PlusIcon" className="w-6 h-6" width={100} height={100} />
                   )}
                 </button>
 
@@ -364,7 +348,7 @@ export default function Home() {
         <div className="border-2 w-[90%] p-4 m-auto  bg-[#F3F3F3] rounded-3xl ">
           <div className="flex lg:w-[85%] md:w-[85%] sm:w-[85%] w-[90%] m-auto p-4 justify-between space-x-10 mt-4 font-sans">
             <div className="lg:w-[40%] md:w-[40%] sm:w-[40%] w-[40%]">
-              <Image src={communityImage} alt="Community" className="lg:w-[311px] lg:h-[277px] md:w-[261px] md:h-[222] sm:w-[211] sm:h-[172] w-[135px] h-[113px]" />
+              <Image src="/images/Illustration.png" alt="Community" width={311} height={277} className="lg:w-[311px] lg:h-[277px] md:w-[261px] md:h-[222] sm:w-[211] sm:h-[172] w-[135px] h-[113px]" />
             </div>
             <div className="w-[65%] md:w-[55%] sm:w-[55%] lg:w-[55%] lg:mt-4 md:mt-4 sm:mt-3 mt-0">
               <h1 className="lg:text-[32px] md:text-[22px] sm:text-[14px] text-[10px] font-bold text-primaryColor">Be a part of our community</h1>
@@ -411,9 +395,9 @@ export default function Home() {
                   </span>
 
                   {openIndex === index ? (
-                    <Image src={AccordSubIcon} alt="subIcon" className="w-6 h-6" />
+                    <Image src="/images/Plus-icon-(1).png" alt="subIcon" className="w-6 h-6" width={100} height={100} />
                   ) : (
-                    <Image src={AccordPlusIcon} alt="PlusIcon" className="w-6 h-6" />
+                    <Image src="/images/Plus-icon.png" alt="PlusIcon" className="w-6 h-6" width={100} height={100} />
                   )}
                 </button>
 
@@ -438,9 +422,9 @@ export default function Home() {
         <div className="w-[90%] m-auto pt-14 pb-14">
           <div className="md:flex block md:justify-between items-center ">
             <Image
-              src={footerLogo}
+              src='/images/Footer-Logo.png'
               alt="Dependly Logo"
-              className="w-144px h-28px"
+              className="w-144px h-28px" width={144} height={28}
             />
             <div className="flex space-x-8 text-white text-[18px]">
               <a className="hover:text-[#2d2d2d] cursor-pointer">
@@ -457,9 +441,10 @@ export default function Home() {
               </a>
             </div>
             <Image
-              src={socialMediaLogo}
+              src="/images/Social-icons.png"
               alt="Dependly Logo"
               className="w-30px h-30px"
+              width={100} height={100}
             />
           </div>
           <div className="flex justify-between mt-20">
@@ -502,9 +487,9 @@ export default function Home() {
           <div className="w-[100%]">
             <div className="flex justify-center items-center">
               <Image
-                src={footerLogo}
+                src='/images/Footer-Logo.png'
                 alt="Dependly Logo"
-                className="w-144px h-28px"
+                className="w-144px h-28px" width={144} height={28}
               />
             </div>
 
@@ -541,9 +526,9 @@ export default function Home() {
               </form>
               <div className="flex justify-center items-center">
                 <Image
-                  src={socialMediaLogo}
+                  src="/images/Social-icons.png"
                   alt="Dependly Logo"
-                  className="w-30px h-30px mt-16 "
+                  className="w-30px h-30px mt-16 " width={100} height={100}
                 />
               </div>
               <div className="flex justify-center items-center">

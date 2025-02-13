@@ -2,9 +2,6 @@
 
 import { useState } from "react";
 import Image from "next/image"; 
-import FreelancersImage from "@/assets/Frame 1000005080 (1).png"
-import OnlineImage from '@/assets/Frame 1000005080.png'
-import contractImage from '@/assets/Frame 1000005080 (2).png'
 type TabType = "Freelancers" | "Online Merchants" | "Contract";
 
 // Define the structure of the tab content
@@ -25,21 +22,21 @@ export default function TabComponent() {
       spanTitle: "Contractor",
       description:
         "We ensure freelancers secure payment processing, efficient contract management, and seamless transaction tracking.",
-      imageSrc: FreelancersImage.src,
+      imageSrc: '/images/Frame-1000005080-(1).png',
     },
     "Online Merchants": {
       title: "Sell",
       spanTitle: "Seamlessly",
       description:
         "You can focus on growing your business while we handle the intricacies of online commerce.",
-      imageSrc: OnlineImage.src,
+      imageSrc: '/images/Frame-1000005080.png',
     },
     Contract: {
       title: "Ensure Secure",
       spanTitle: "Fulfillment",
       description:
         "Empower your business by issuing contracts that go beyond security, but also a catalyst for confidence and long-lasting partnerships.",
-      imageSrc: contractImage.src,
+      imageSrc: '/images/Frame-1000005080-(2).png',
     },
   };
 
@@ -77,7 +74,7 @@ export default function TabComponent() {
       {/* Header Text */}
       
       {/* Image for Each Tab */}
-      <div className="mt-6  w-[80%] bg-[#0091A636] flex justify-center items-center rounded-t-xl" >
+      <div className="mt-6  w-[85%] bg-[#0091A636] flex justify-center items-center rounded-t-xl" >
         <Image src={tabContent[activeTab].imageSrc} alt={activeTab} width={423} height={500} className="mt-3"/>
       </div>
       {/* Image for Each Tab */}
