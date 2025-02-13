@@ -7,7 +7,6 @@ import Logo from "../../public/images/Dependly FLW 2.png";
 import { Button } from "./ui/button";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { images } from "../../data/images";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
