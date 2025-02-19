@@ -4,7 +4,7 @@ import Image from "next/image"
 import { useEffect, useState } from "react"
 import abeezee from "@/lib/font"
 import Gilroy from "@/lib/fonts2"
-import { useRouter } from "next/navigation"
+// import { useRouter } from "next/navigation"
 
 const slides = [
     {
@@ -28,7 +28,7 @@ const slides = [
 ];
 
 const LogoDisplaying = () => {
-    const router = useRouter()
+    // const router = useRouter()
     const [stage, setStage] = useState<number>(1);
 
     const [index, setIndex] = useState(0);
