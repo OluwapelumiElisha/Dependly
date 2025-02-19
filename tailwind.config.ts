@@ -21,8 +21,6 @@ const config: Config = {
   			]
   		},
   		colors: {
-  			// background: 'hsl(var(--background))',
-  			// foreground: 'hsl(var(--foreground))',
 			primaryColor: "#0148AB",
 			backgroundColor: "#EDF7F9",
 			buttonColor : '#0148AB',

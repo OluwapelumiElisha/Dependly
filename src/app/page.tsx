@@ -89,27 +89,27 @@ export default function Home() {
   const faqs: faqsTypes[] = [
     {
       question: "Is Dependly a Fintech Company?",
-      answer: "With Dependly, you can streamline Contractual Agreements for Seamless Collaboration and Enhanced Transparency in Our Enterprise Solution"
+      answer: "Yes, Dependly is a cutting-edge FinTech platform that provides secure and efficient financial solutions, including transfer, embedded contracts, and escrow services. Our goal is to enhance trust and seamless transactions in the digital finance space."
     },
     {
       question: "How Do I open An Account with Dependly?",
-      answer: "With Dependly, you can streamline Contractual Agreements for Seamless Collaboration and Enhanced Transparency in Our Enterprise Solution"
+      answer: "Opening an account is quick and easy. Simply visit our sign-up page, provide the required details, and follow the verification process to start enjoying seamless transactions."
     },
     {
       question: "Does Dependly have Merchant Referral Program?",
-      answer: "With Dependly, you can streamline Contractual Agreements for Seamless Collaboration and Enhanced Transparency in Our Enterprise Solution"
+      answer: "Yes! Dependly offers a merchant referral program that rewards users for referring businesses to our platform. Stay tuned for details on how to participate and earn incentives."
     },
     {
       question: "How Do I Contact The Customer care Centre?",
-      answer: "With Dependly, you can streamline Contractual Agreements for Seamless Collaboration and Enhanced Transparency in Our Enterprise Solution"
+      answer: "You can reach our Customer Support team through email, live chat, or our support hotline. Visit the Help & Support section on our website for more details."
     },
     {
       question: "How Do I complete my KYC?",
-      answer: "With Dependly, you can streamline Contractual Agreements for Seamless Collaboration and Enhanced Transparency in Our Enterprise Solution"
+      answer: "To complete your Know Your Customer (KYC) process, simply upload the necessary identification documents via your account dashboard. This ensures compliance with financial regulations and enhances security."
     },
     {
       question: "How Safe Is Transfer Transfer Transactions on Dependly?",
-      answer: "With Dependly, you can streamline Contractual Agreements for Seamless Collaboration and Enhanced Transparency in Our Enterprise Solution"
+      answer: "Security is our top priority. Dependly employs advanced encryption, fraud detection, and escrow services to safeguard your transactions. Our system ensures precision and trust in every financial interaction."
     }
   ];
 
